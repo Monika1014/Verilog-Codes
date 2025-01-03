@@ -1,0 +1,8 @@
+module full_sub ( 
+       input a,
+       input b,
+       input c,
+       output diff,
+       output bor );
+assign diff = a ^ b ^ c; 
+assign bor =  (~a & b) | (~(a ^ b) & c);

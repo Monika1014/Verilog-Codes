@@ -6,3 +6,4 @@ module full_sub (
        output bor );
 assign diff = a ^ b ^ c; 
 assign bor =  (~a & b) | (~(a ^ b) & c);
+endmodule

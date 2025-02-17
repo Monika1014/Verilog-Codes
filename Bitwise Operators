@@ -1,0 +1,23 @@
+ module bit_wise_operators ( input [6:0] a_in,
+ input [5:0] b_in,
+ output reg [6:0] y_out );
+
+ always@ (a_in, b_in )
+ begin
+
+ y_out[0] = a_in[0] & b_in[0];
+
+ y_out[1] = !( a_in[1] & b_in[1]);
+
+ y_out[2] = a_in[2] | b_in[2];
+ 
+ y_out[3] = !( a_in[3] | b_in[3]);
+
+ y_out[4] = a_in[4] ^ b_in[4];
+ 
+ y_out[5] = ( a_in[5] ~^ b_in[5]);
+ 
+ y_out[6] = ! a_in[6];
+
+ end
+ endmodule

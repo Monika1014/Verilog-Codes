@@ -1,0 +1,14 @@
+module pipo ( clk, reset_n, d_in, q_out );
+input clk, reset_n;
+input [3:0] d_in ;
+output [3:0] q_out;
+reg [3:0] q_out;
+
+always @ (posedgeclk or negedge reset_n)
+begin
+     if (` reset_n)
+         q_out <= 4'b0000;
+     else
+         q_out <= d_in;
+end         
+endmodule         

@@ -1,0 +1,16 @@
+module up_counter ( d_in, load, clk, reset_n, q_out )
+input [2:0] d_in;
+input load, clk, reset_n ;
+output [2:0] q_out;
+reg [2:0] q_out;
+
+always @ (posedge clk)
+begin
+     if ( ` reset_n)
+          q_out <= 3'b000;
+     else if (load)
+          q_out <= d_in;
+     else
+          q_out <= q_out +1;
+end
+endmodule

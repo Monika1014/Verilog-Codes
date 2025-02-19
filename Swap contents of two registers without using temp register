@@ -1,0 +1,5 @@
+ always @ (posedge clock)
+ begin
+ a <= b;
+ b <= a;
+ end
